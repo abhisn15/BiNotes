@@ -1,6 +1,6 @@
 {
-    "name": "binotes",
-    "short_name": "binotes",
+    "name": "BiNotes",
+    "short_name": "BiNotes",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

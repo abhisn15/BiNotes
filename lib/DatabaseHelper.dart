@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:binotes/Catatan.dart';
+import 'package:BiNotes/Catatan.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 

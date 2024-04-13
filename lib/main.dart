@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:binotes/Catatan.dart';
+import 'package:BiNotes/Catatan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:intl/intl.dart';
-import 'package:binotes/DatabaseHelper.dart';
+import 'package:BiNotes/DatabaseHelper.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -178,8 +178,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 TextStyle(fontWeight: FontWeight.bold, color: appBarTextColor),
           ),
         ),
-        shadowColor: Colors.black54,
-        elevation: 4,
         backgroundColor:
             brightness == Brightness.light ? Colors.white : Colors.black,
       ),
@@ -652,7 +650,7 @@ class _TambahCatatanScreenState extends State<TambahCatatanScreen> {
                   hintStyle: TextStyle(
                       color: brightness == Brightness.light
                           ? Color.fromARGB(255, 118, 118, 118)
-                          : Colors.white),
+                          : Colors.white54),
                 ),
               ),
               Text(
@@ -661,7 +659,11 @@ class _TambahCatatanScreenState extends State<TambahCatatanScreen> {
                     '  |  ' +
                     hitungJumlahKarakter().toString() +
                     ' Karakter',
-                style: TextStyle(color: Colors.black45, fontSize: 12),
+                style: TextStyle(
+                    color: brightness == Brightness.light
+                        ? Colors.black45
+                        : Colors.white54,
+                    fontSize: 12),
               ),
               SizedBox(
                 width: 10,
@@ -682,7 +684,7 @@ class _TambahCatatanScreenState extends State<TambahCatatanScreen> {
                   hintStyle: TextStyle(
                     color: brightness == Brightness.light
                         ? Color.fromARGB(255, 131, 131, 131)
-                        : Colors.white,
+                        : Colors.white54,
                   ),
                 ),
               ),
@@ -808,7 +810,8 @@ class _EditCatatanScreenState extends State<EditCatatanScreen> {
           children: [
             IconButton(
               onPressed: () {
-                Share.share(widget.catatan.judul + '\n' + widget.catatan.isi);
+                Share.share(
+                    widget.catatan.judul + '\n' + '\n' + widget.catatan.isi);
               },
               icon: Icon(
                 Icons.ios_share_outlined,
@@ -863,7 +866,7 @@ class _EditCatatanScreenState extends State<EditCatatanScreen> {
                   hintStyle: TextStyle(
                       color: brightness == Brightness.light
                           ? Color.fromARGB(255, 0, 0, 0)
-                          : Colors.white),
+                          : Colors.white54),
                 ),
               ),
               Text(
@@ -872,7 +875,11 @@ class _EditCatatanScreenState extends State<EditCatatanScreen> {
                     '  |  ' +
                     hitungJumlahKarakter().toString() +
                     ' Karakter',
-                style: TextStyle(color: Colors.black45, fontSize: 12),
+                style: TextStyle(
+                    color: brightness == Brightness.light
+                        ? Colors.black54
+                        : Colors.white54,
+                    fontSize: 12),
               ),
               SizedBox(
                 width: 10,
@@ -893,7 +900,7 @@ class _EditCatatanScreenState extends State<EditCatatanScreen> {
                   hintStyle: TextStyle(
                     color: brightness == Brightness.light
                         ? Color.fromARGB(255, 33, 33, 33)
-                        : Colors.white,
+                        : Colors.white54,
                   ),
                 ),
               ),
