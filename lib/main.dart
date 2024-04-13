@@ -795,13 +795,10 @@ class _EditCatatanScreenState extends State<EditCatatanScreen> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData theme = Theme.of(context);
     Brightness brightness = Brightness.light;
-    Color appBarTextColor = Colors.black;
 
     if (waktuSaatIni == 'Sore' || waktuSaatIni == 'Malam') {
       brightness = Brightness.dark;
-      appBarTextColor = Colors.white;
     }
     return Scaffold(
       appBar: AppBar(
